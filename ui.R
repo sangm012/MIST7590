@@ -4,9 +4,8 @@
 #
 # Find out more about building applications with Shiny here:
 #
-#    http://shiny.rstudio.com/
-#
 
+library(shinythemes)
 library(shiny)
 
 source('simulationMBT.R',local=FALSE)
@@ -18,7 +17,7 @@ source('report.R', echo = T)
 
 
 # Define UI for application that draws a histogram
-shinyUI(fluidPage(
+shinyUI(fluidPage(shinythemes::themeSelector(),
 
     # Application title
     titlePanel("LAMP - Solar Data Calculator"),
@@ -26,20 +25,20 @@ shinyUI(fluidPage(
     # Sidebar with a slider input for number of bins
     sidebarLayout(
         sidebarPanel(
-            numericInput("LEDcost",
-                        "LED Cost:",
-                        value = LEDCost),
-    
-        numericInput("LEDlife",
-                       "LED Life:",
-                       value = LEDLife),
+        #     numericInput("LEDcost",
+        #                 "LED Cost:",
+        #                 value = LEDCost),
+        # 
+        # numericInput("LEDlife",
+        #                "LED Life:",
+        #                value = LEDLife),
         
-       sliderInput("bins",label = "Choose a number", value = 25, min = 1, max = 300),
-       sliderInput("bins",label = "More Example", value = 25, min = 1, max = 300)
+       selectInput("vegetable",label = "Select Plant", c(Lettuce ="1",Squash ="2",Cucumber = "3"), selected = NULL, selectize = TRUE),
+       selectInput("region",label = "Select Region", c("Athens", "Atlanta"),selected = "Athens",selectize = TRUE)
        
         ),
 
-        # Show a plot of the generated distribution
+        # Show a plot of the generated distribution and report
         mainPanel(
             plotOutput("scatterPlot"),
             verbatimTextOutput("report"),
@@ -50,7 +49,8 @@ shinyUI(fluidPage(
             verbatimTextOutput("avg_annual_cost_per_led"),
             verbatimTextOutput("avg_led_wattage"),
             verbatimTextOutput("roi")
-            
+            # verbatimTextOutput("example")
+            # 
         )
     )
 ))

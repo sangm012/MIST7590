@@ -1,6 +1,6 @@
 # Parameters --------------------------------------------------------------
 path <- "C:/Users/TXN8523/OneDrive - The Home Depot/Desktop/XLS GP_MIST7590E Technology Capstone Project/MIST7590-master/LAMP_Web_App"
-setwd(path) 
+#setwd(path) 
 # Parameters --------------------------------------------------------------
 measures_hour <-  6 # solar radiation measures per hour 
 daily_moles = 3 # plan requirement in moles per day 

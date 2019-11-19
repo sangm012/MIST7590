@@ -8,7 +8,6 @@
 library(shinythemes)
 library(shiny)
 
-source('simulationMBT.R',local=FALSE)
 source('parameters.R', local = FALSE)
 source('prepare.R', local = FALSE)
 source('simulationMBT.R',local=FALSE)

@@ -1,0 +1,12 @@
+name: r_simulator
+title: r_simulator
+username:
+account: mist7590e-team2
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1496345
+bundleId: 2601826
+url: https://mist7590e-team2.shinyapps.io/r_simulator/
+when: 1574201544.90303
+asMultiple: FALSE
+asStatic: FALSE

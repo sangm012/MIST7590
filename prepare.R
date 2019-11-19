@@ -1,3 +1,12 @@
+
+library(readr)
+library(maptools)
+library(lubridate)
+library(dplyr)
+library(feather)
+library(ggplot2)
+library(stringr)
+library(FinCal)
 electricity_df <- read_feather(electricity_url) 
 electricity <-  electricity_df %>%
   filter(year(timestamp) %in% year_range) %>% 

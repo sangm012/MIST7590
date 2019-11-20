@@ -32,8 +32,8 @@ shinyUI(fluidPage(shinythemes::themeSelector(),
         #                "LED Life:",
         #                value = LEDLife),
         
-       selectInput("vegetable",label = "Select Plant", c(Lettuce ="1",Squash ="2",Cucumber = "3"), selected = NULL, selectize = TRUE),
-       selectInput("region",label = "Select Region", c("Athens", "Cornell"),selected = "Athens",selectize = TRUE)
+       selectInput("vegetable",label = "Select Plant", c("Select Plant", Lettuce ="1",Squash ="2",Cucumber = "3"), selected = "Select Plant", selectize = TRUE),
+       selectInput("region",label = "Select Region", c("Select Region", "Athens", "Cornell"),selected = "Select Region",selectize = TRUE)
        
         ),
 

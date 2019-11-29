@@ -9,6 +9,7 @@ library(shinythemes)
 library(shiny)
 library(feather)
 
+source('simulationMBT.R',local=FALSE)
 source('parameters.R', local = FALSE)
 source('prepare.R', local = FALSE)
 source('simulationMBT.R',local=FALSE)
@@ -33,10 +34,10 @@ shinyUI(fluidPage(shinythemes::themeSelector(),
         #                "LED Life:",
         #                value = LEDLife),
         
-      selectInput("region",label = "Region", c("Select Region", "Athens", "Cornell"),selected = "Select Region",selectize = TRUE),
-      selectInput("vegetable",label = "Plant", c("Select Plant", Lettuce ="1",Squash ="2",Cucumber = "3"), selected = "Select Plant", selectize = TRUE)
-                          
-     ),
+            selectInput("region",label = "Region", c("Select Region", Athens="1", Ithaca="2",Alexandria="3"),selected = "Select Region",selectize = TRUE),
+            selectInput("vegetable",label = "Plant", c("Select Plant", Lettuce ="1",Squash ="2",Cucumber = "3"), selected = "Select Plant", selectize = TRUE)
+            
+        ),
 
         # Show a plot of the generated distribution and report
         mainPanel(
@@ -54,3 +55,4 @@ shinyUI(fluidPage(shinythemes::themeSelector(),
         )
     )
 ))
+

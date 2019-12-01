@@ -51,12 +51,12 @@ shinyServer(function(input, output) {
   
   #******************************region variables******************************
   athens <- 1
-  ithaca <-.85
+  cornell <-.85
   alexandria <- .75
   
   
   x <- athens
-  y <- ithaca
+  y <- cornell
   z <- alexandria
   
     
@@ -113,7 +113,7 @@ shinyServer(function(input, output) {
          filter(row_number() < 366) # discard extra day from graph 
        
        
-        ggplot(temp, aes(day, cost)) +geom_point(color = 'red') +labs(y = 'Cost', x = 'Day of year', title = "Ithaca - Lettuce") + ylim (0,1)
+        ggplot(temp, aes(day, cost)) +geom_point(color = 'red') +labs(y = 'Cost', x = 'Day of year', title = "Cornell - Lettuce") + ylim (0,1)
         
         
       }
@@ -127,7 +127,7 @@ shinyServer(function(input, output) {
       
       
       
-      ggplot(temp, aes(day, cost)) +geom_point(color = 'pink') +labs(y = 'Cost', x = 'Day of year', title = "Ithaca - Squash") + ylim (0,1)
+      ggplot(temp, aes(day, cost)) +geom_point(color = 'pink') +labs(y = 'Cost', x = 'Day of year', title = "Cornell - Squash") + ylim (0,1)
       
       
     }
@@ -141,7 +141,7 @@ shinyServer(function(input, output) {
       
       
       
-      ggplot(temp, aes(day, cost)) +geom_point(color = 'purple') +labs(y = 'Cost', x = 'Day of year', title = "Ithaca - Cucumber") + ylim (0,1)
+      ggplot(temp, aes(day, cost)) +geom_point(color = 'purple') +labs(y = 'Cost', x = 'Day of year', title = "Cornell - Cucumber") + ylim (0,1)
       
     }
     
